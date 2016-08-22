@@ -1,0 +1,663 @@
+/*
+    基本的默认值
+*/
+html{
+    font-size: 62.5%;
+    color: #222;
+    font-family: "微软雅黑";
+}
+/*
+    *文字被选中的颜色
+*/
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #666;
+    text-decoration: none;
+}
+/*工具样式*/
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.pull-right{
+    float: right !important;
+}
+.pull-left{
+    float: left !important;
+}
+.text-right{
+    text-align: right !important;
+}
+.text-left{
+    text-align: left !important;
+}
+.text-center{
+    text-align: center !important;
+}
+.hide{
+    display: none !important;
+}
+.show{
+    display: block !important;
+}
+.invisible{
+    visibility: hidden;
+}
+.text-hide{
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+.pos(r){
+    position: relative;
+}
+.pos(a){
+    position: absolute;
+}
+.pos(f){
+    position: fixed;
+}
+.pull-diff{
+        display: block;
+        width: 2rem; // 24px
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #c59a6d;
+        padding: .16666667rem 0;
+        margin-top: 3.5rem;
+}
+/*目的是触发的BFC*/
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+/*
+    *浏览器更新的提示
+*/
+.browserupgrade{
+    margin: 0;
+    padding: 1rem;
+    background: #ccc;
+}
+/*
+    *自定义页面样式
+*/
+body{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+/*
+    *网站的头部
+*/
+header{
+    width: 100%;
+    .top{
+        line-height: 4rem;
+        background-color: #5a5e61;
+        color: #fff;
+        padding: 0 2rem;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+}
+.top{
+    .tel{
+        float: left;
+    }
+    ul{
+        text-align: right;
+        li{
+            display: inline-block;
+            a{
+                display: inline-block;
+                padding: 0 1.5rem;
+                color: #fff;
+                transition: all .5s;
+                &:hover{
+                    transform: scale(1.2, 1.2) rotate(360deg);
+                }
+            }
+        }
+    }
+}
+
+/*网站的主体部分*/
+
+/*
+    *HOME部分
+*/
+.container{
+    width: 100%;
+}
+
+.theme-home{
+    background: url(../img/cutps/home-tiny.png) center no-repeat;
+    background-size: cover;
+    padding: 12rem;
+    .theme{
+        text-align: center;
+        .theme-word{
+             font-size: 3.5rem;
+            color: #697986;
+            //border: 1px solid #c59a6d;
+            //padding: 2rem 3rem;
+            font-weight: bold;
+        }
+    }
+}
+/*meet us样式*/
+.meet-us{
+    background-color: #fff;
+    padding: 2.5rem;
+    text-align: center;
+    .meet{
+        .use-message{
+            color: #697986;
+            font-weight: bold;
+        }
+    }
+}
+/*video的播放样式*/
+.video{
+    .pos(r);
+    height: 22rem;
+    background: url(../img/cutps/video-tiny.png) center no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    .trangle{
+        .pos(a);
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-top: 1.66666667rem solid transparent; // 20px
+        border-left: 2.5rem solid #333; // 30px
+        border-bottom: 1.66666667rem solid transparent; // 20px
+        transition: all 0.5s;
+        &:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
+}
+/*service的样式*/
+.service{
+    padding: 4.5rem;
+}
+.service-pro{
+    text-align: center;
+}
+.service-styles{
+    margin-top: 5rem; // 60px
+    ul{
+        text-align: center;
+        li{
+            display: inline-block;
+            border: 1px solid #697986;
+            &:first-child{
+                padding: 2.5rem 2rem;
+            }
+            &:last-child{
+                padding: 2.5rem 2rem;
+            }
+            &:nth-of-type(2){
+                padding: 5rem 1.66666667rem;
+                border-color: #c59a6d;
+                h4{
+                    color: #c59a6d;
+                }
+            }
+        }
+        li + li{
+            margin-left: 1.5rem;
+        }
+    }
+}
+
+/*check our shop*/
+.shop{
+    padding: 5rem 0; // 60px
+    background-color: #282f35;
+    .btn-shop{
+        margin: 0 auto;
+        width: 18rem;
+        text-align: center;
+        border: 1px solid #c59a6d;
+        color: #fff;
+        padding: .5rem 0; // 6px
+    }
+}
+/*our lastest projects*/
+.last-project{
+    padding-bottom: 4.5rem;
+}
+.pro-message{
+    text-align: center;
+    padding: 5rem; // 60px
+}
+.pro-pictures{
+    img{
+        display: inline-block;
+        width: 20%;
+        padding-bottom: 5rem; // 60px
+        height: 16rem;
+    }
+    img + img{
+        margin-left: -4px;
+    }
+}
+.more-on-behance{
+    background-color: #c59a6d;
+    text-align: center;
+    width: 12.5rem; // 150px
+    line-height: 3.5rem;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #fff;
+}
+/*合作伙伴partners*/
+.partners{
+    background: url(../img/cutps/partners-tiny.png) center no-repeat;
+    background-size: cover;
+    padding: 4rem; // 48px
+    //opacity: 0.9;
+    .partners-title{
+        text-align: center;
+        color: #fff;
+    }
+}
+.partners-list{
+    padding-top: 1rem; // 12px
+    ul{
+        text-align: center;
+        li{
+            display: inline-block;
+        }
+        li + li{
+            margin-left: 4rem; // 48px
+        }
+    }
+}
+/*about us的样式*/
+.about-us{
+    padding:4.5rem;
+}
+.about-title{
+    text-align: center;
+}
+.roles{
+    padding-top: 6rem;
+}
+.roles-list{
+    ul{
+        text-align: center;
+        li{
+            display: inline-block;
+            border: 1px solid #666;
+            padding: 2.5rem 3rem;
+            vertical-align: bottom;
+            .roles-radius{
+                border-radius: 50%;
+            }
+            &:last-child{
+                border-color: #c59a6d;
+                color: #c59a6d;
+                padding: 7.25rem 2.5rem;
+            }
+        }
+        li + li{
+            margin-left: 1.6rem;
+        }
+    }
+}
+/*响应式广告*/
+.ad{}
+/*connect-us样式*/
+.connect-us{
+    background-color: #282f35;
+    padding-bottom: 5rem; // 60px
+}
+.connect-title{
+    text-align: center;
+    padding-top: 4.5rem;
+    color: #fff;
+}
+.connect-mes{
+    padding-top: 4.5rem;
+    text-align: center;
+    .c-mes-l{
+        display: inline-block;
+    }
+    .c-mes-r{
+        display: inline-block;
+    }
+}
+.c-mes-l{
+    color: #fff;
+    //padding-bottom: 2.5rem; // 30px
+    span{
+        font-weight: bold;
+    }
+    p{
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+    .mes-icon{
+        padding-top: 1.25rem; // 15px
+        img + img{
+            display: inline-block;
+            margin-left: 1rem; // 12px
+        }
+    }
+}
+.c-mes-r{
+    padding-left: 5rem; // 60px
+    input[type="text"]{
+        width: 85%;
+        display: block;
+        background-color: #1e2429;
+        outline: 0;
+        border: 0;
+        padding: .6rem;
+        margin: .8rem;
+        color: #fff;
+        font-style: italic;
+    }
+    textarea{
+        display: block;
+        background-color: #1e2429;
+        outline: 0;
+        border: 0;
+        resize: none;
+        padding: .8rem;
+        margin: .8rem;
+        color: #fff;
+        font-style: italic;
+    }
+    input[type="submit"]{
+        width: 92%;
+        display: block;
+        background-color: #c59a6d;
+        border: 0;
+        outline: 0;
+        padding: .6rem;
+        margin: .8rem;
+        color: #fff;
+        transition: all .5s;
+        &:hover{
+            background-color: #fff;
+            color: #282f35;
+        }
+    }
+}
+.connect-identify{
+    padding-top: 5rem; // 60px
+    color: #fff;
+    p{
+        font-size: 1.3rem;
+        padding-right: 5rem; // 60px
+        &:nth-of-type(1){
+            padding-left: 5rem; // 60px
+            span{
+                color: #c59a6d;
+            }
+        }
+        &:nth-of-type(2){
+            a{
+                color: #c59a6d;
+                font-weight: bold;
+            }
+            .icon-chevron-up{
+                color: #c59a6d;
+            }
+        }
+    }
+}
+/*
+    **响应式的布置
+*/
+@media only screen and(max-width: 60em){
+
+}
+@media only screen and(min-width: 34.375em) and(max-width: 60em){
+/*
+*网站的头部
+*/
+    header{
+        .top{
+            line-height: 2.5rem;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+    }
+    .top{
+        ul li+li{
+            padding: 0;
+            margin-left: -2rem;
+        }
+    }
+/*
+    *HOME部分
+*/
+    .theme-home{
+        padding: 8rem;
+    }
+/*service的样式*/
+
+    .service-styles{
+        ul li + li{
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+    }
+/*last project*/
+    .last-project{
+        .pro-pictures{
+            img{
+                height: 12rem;
+            }
+        }
+    }
+/*合作伙伴partners*/
+    .partners-list{
+        ul li + li{
+            margin-left: 2rem;
+        }
+    }
+    .roles-list{
+        ul li + li{
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+    }
+/*connect-us样式*/
+    .connect-identify{
+        p{
+            padding-right: 2rem;
+            &:nth-of-type(1){
+                padding-left: 2rem;
+            }
+        }
+    }
+}
+@media only screen and(max-width: 34.375em){
+/*
+    *网站的头部
+*/
+    header{
+        .top{
+            line-height: 2rem;
+            font-size: 0.5rem;
+            padding: 0 .5rem;
+        }
+    }
+    .top{
+        ul li{
+            &:nth-child(1),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5){
+                display: none;
+            }
+        }
+    }
+/*
+    *HOME部分
+*/
+    .theme-home{
+        background-image: url(../img/cutps/home-s.png);
+        padding: 3rem;
+        .theme{
+            h3{
+                font-size: 1rem;
+            }
+            .theme-word{
+                font-size: 2rem;
+            }
+        }
+    }
+/*service*/
+    .service-styles{
+        ul li{
+            &:nth-of-type(1),
+            &:nth-of-type(3){
+                display: none;
+            }
+        }
+    }
+/*last project*/
+    .last-project{
+        .pro-pictures{
+            img{
+                height: 9rem;
+            }
+        }
+    }
+/*合作伙伴partners*/
+    .partners-list{
+        ul li + li{
+            margin-left: 0;
+        }
+    }
+/*about-us*/
+    .roles-list{
+        ul li{
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3){
+                display: none;
+            }
+        }
+    }
+/*connect-us样式*/
+    .connect-identify{
+        padding-top: 2rem;
+        p{
+            font-size: 1.0rem;
+            padding-right: 2.5rem;
+            &:nth-of-type(1){
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and(max-width: 25.875em){
+/*
+    *网站的头部
+*/
+    header{
+        .top{
+            line-height: 2rem;
+            font-size: 0.5rem;
+            padding: 0 .5rem;
+        }
+    }
+    .top{
+        ul li{
+            &:nth-child(1),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5){
+                display: none;
+            }
+        }
+    }
+/*
+    *HOME部分
+*/
+    .theme-home{
+        background-image: url(../img/cutps/home-s.png);
+        padding: 3rem;
+        .theme{
+            h3{
+                font-size: 1rem;
+            }
+            .theme-word{
+                font-size: 2rem;
+            }
+        }
+    }
+/*service*/
+    .service-styles{
+        ul li{
+            &:nth-of-type(1),
+            &:nth-of-type(3){
+                display: none;
+            }
+        }
+    }
+/*last project*/
+    .last-project{
+        .pro-pictures{
+            img{
+                height: 9rem;
+            }
+        }
+    }
+/*合作伙伴partners*/
+    .partners-list{
+        ul li + li{
+            margin-left: 0;
+        }
+    }
+/*about-us*/
+    .roles-list{
+        ul li{
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(3){
+                display: none;
+            }
+        }
+    }
+/*connect-us样式*/
+    .connect-identify{
+        padding-top: 2rem;
+        p{
+            font-size: 1.0rem;
+            padding-right: 2.5rem;
+            &:nth-of-type(1){
+                display: none;
+            }
+        }
+    }
+}

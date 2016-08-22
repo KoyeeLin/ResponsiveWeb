@@ -1,0 +1,3 @@
+/*给网络的爬虫用来搜索的*/
+User-agent: *
+Disallow: /admin/
